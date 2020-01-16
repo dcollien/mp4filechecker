@@ -1,6 +1,6 @@
 {
   "name": "mp4filechecker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check details of an mp4 file, e.g. to determine if transcoding is required",
   "main": "index.js",
   "scripts": {
@@ -13,9 +13,21 @@
   "files": [
     "lib/**/*"
   ],
-  "keywords": [],
+  "keywords": [
+    "video",
+    "mp4",
+    "avc1",
+    "transcode",
+    "codec",
+    "compression",
+    "upload"
+  ],
   "author": "David Collien",
-  "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/dcollien/mp4filechecker.git"
+  },
+  "license": "MIT",
   "devDependencies": {
     "prettier": "^1.19.1",
     "rollup": "^1.29.0",
