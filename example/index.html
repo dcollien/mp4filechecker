@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Test Mp4 Video</title>
+  </head>
+  <body>
+    <form name="checker">
+      <input type="file" name="video" accept=".webm,.ogg,.mpg,.mp2,.mpeg,.mpe,.mpv,.mp4"/>
+      <input type="submit" value="Check Video" />
+    </form>
+    <script src="dist/bundle.js"></script>
+    <script>
+        document.forms.checker.onsubmit = (evt) => {
+            evt.preventDefault();
+            const file = document.forms.checker.elements.video.files[0];
+            mp4filechecker.checkMp4File(file).then((isValid) => {
+                alert(isValid);
+            });
+        };
+    </script>
+  </body>
+</html>
