@@ -7,7 +7,7 @@ npm install mp4filechecker
 Checks a File or Blob to determine if it is an mp4 file matching a particular codec and dimensions.
 
 Usage:
-```
+```javascript
 import { checkMp4File } from 'mp4filechecker';
 
 const file = fileOrBlob; // e.g. fileInput.files[0]
