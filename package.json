@@ -1,6 +1,6 @@
 {
   "name": "mp4filechecker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Check details of an mp4 file, e.g. to determine if transcoding is required",
   "main": "lib/index.js",
   "scripts": {
@@ -38,6 +38,6 @@
     "typescript": "^3.7.4"
   },
   "dependencies": {
-    "mp4box": "github:dcollien/mp4box.js#fixes"
+    "mp4box": "github:dcollien/mp4box.js#dist"
   }
 }
