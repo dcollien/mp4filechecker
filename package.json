@@ -1,6 +1,6 @@
 {
   "name": "mp4filechecker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Check details of an mp4 file, e.g. to determine if transcoding is required",
   "main": "index.js",
   "scripts": {
