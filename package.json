@@ -52,6 +52,6 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "mp4box": "mp4box@github:dcollien/mp4box.js#001dd6a8b1dd9c7379bfe8a68db41651898eee43"
+    "mp4box": "github:dcollien/mp4box.js#001dd6a8b1dd9c7379bfe8a68db41651898eee43"
   }
 }
