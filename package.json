@@ -1,6 +1,6 @@
 {
   "name": "mp4filechecker",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Check details of an mp4 file, e.g. to determine if transcoding is required",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
