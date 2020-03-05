@@ -2,16 +2,25 @@
   "name": "mp4filechecker",
   "version": "1.0.4",
   "description": "Check details of an mp4 file, e.g. to determine if transcoding is required",
-  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "bundle-example": "cd example && rollup -c"
+    "bundle-example": "cd example && rollup -c",
+    "build-cjs": "babel --source-maps true -x .ts src/ -d cjs",
+    "build-es": "babel --source-maps true --env-name es -x .ts src/ -d es",
+    "build-ts": "tsc",
+    "build": "yarn run build-cjs && yarn run build-es && yarn run build-ts",
+    "clean": "rimraf cjs es ts",
+    "prepare": "yarn run clean && yarn run build"
   },
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "types": "ts/index.d.ts",
   "files": [
-    "lib/**/*"
+    "cjs",
+    "es",
+    "ts"
   ],
   "keywords": [
     "video",
@@ -24,18 +33,23 @@
   ],
   "author": "David Collien",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/dcollien/mp4filechecker.git"
+    "type": "git",
+    "url": "https://github.com/dcollien/mp4filechecker.git"
   },
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-typescript": "^7.8.3",
     "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
     "rollup": "^1.29.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "mp4box": "github:dcollien/mp4box.js#dist"
