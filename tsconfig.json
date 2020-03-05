@@ -4,7 +4,8 @@
     "lib": ["ES6", "DOM", "DOM.Iterable", "ESNext.Asynciterable"],
     "module": "es6",
     "declaration": true,
-    "outDir": "./lib",
+    "emitDeclarationOnly": true,
+    "outDir": "./ts",
     "strict": true
   },
   "include": ["src"],
