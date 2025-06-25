@@ -44,7 +44,7 @@
     "@babel/preset-typescript": "^7.8.3",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
-    "rollup": "^1.29.0",
+    "rollup": "^4.44.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "tslint": "^6.1.0",
@@ -52,6 +52,6 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "mp4box": "github:dcollien/mp4box.js#001dd6a8b1dd9c7379bfe8a68db41651898eee43"
+    "mp4box": "^1.0.1"
   }
 }
